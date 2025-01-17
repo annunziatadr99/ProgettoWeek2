@@ -1,6 +1,6 @@
 package org.example;
 
-public class Libri extends Catalogo{
+public class Libri extends CatalogoArticolo {
     private String autore;
     private String genere;
 

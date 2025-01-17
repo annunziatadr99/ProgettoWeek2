@@ -1,13 +1,13 @@
 package org.example;
 
-public abstract class Catalogo{
+public abstract class CatalogoArticolo {
     protected String isbn;
     protected String titolo;
     protected int annoDiPubblicazione;
     protected int numeroDiPagine;
 
 
-    public Catalogo (String isbn, String titolo, int yearOfPublication, int numberOfPages) {
+    public CatalogoArticolo(String isbn, String titolo, int annoDiPubblicazione, int numeroDiPagine) {
         this.isbn = isbn;
         this.titolo = titolo;
         this.annoDiPubblicazione = annoDiPubblicazione;
