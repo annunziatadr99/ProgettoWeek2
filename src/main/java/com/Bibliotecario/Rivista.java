@@ -1,4 +1,4 @@
-package org.example;
+package com.Bibliotecario;
 
 public class Rivista extends CatalogoArticolo {
     public enum Periodicità{

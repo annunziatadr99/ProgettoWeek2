@@ -72,7 +72,7 @@
           </execution>
         </executions>
         <configuration>
-          <mainClass>org.example.CatalogoBibliotecario</mainClass>
+          <mainClass>com.Bibliotecario.CatalogoBibliotecario</mainClass>
         </configuration>
       </plugin>
     </plugins>

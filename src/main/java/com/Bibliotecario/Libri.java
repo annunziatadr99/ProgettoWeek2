@@ -1,4 +1,4 @@
-package org.example;
+package com.Bibliotecario;
 
 public class Libri extends CatalogoArticolo {
     private String autore;

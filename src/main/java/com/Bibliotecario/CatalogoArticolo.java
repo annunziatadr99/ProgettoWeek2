@@ -1,4 +1,4 @@
-package org.example;
+package com.Bibliotecario;
 
 public abstract class CatalogoArticolo {
     protected String isbn;
