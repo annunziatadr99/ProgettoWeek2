@@ -8,6 +8,7 @@ public class Rivista extends CatalogoArticolo {
 
     public Rivista(String isbn, String titolo, int annoDiPubblicazione, int numeroDiPagine, Periodicità periodicità) {
         super(isbn, titolo, annoDiPubblicazione, numeroDiPagine);
+        this.periodicità = periodicità;
     }
 
     public Periodicità getPeriodicità(){
