@@ -1,10 +1,10 @@
 package com.Bibliotecario;
 
-public class Libri extends CatalogoArticolo {
+public class Libro extends CatalogoArticolo {
     private String autore;
     private String genere;
 
-    public Libri(String isbn, String titolo, int annoDiPubblicazione, int numeroDiPagine) {
+    public Libro(String isbn, String titolo, int annoDiPubblicazione, int numeroDiPagine, String autore, String genere) {
         super(isbn, titolo, annoDiPubblicazione, numeroDiPagine);
     }
 

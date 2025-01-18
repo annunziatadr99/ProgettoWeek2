@@ -6,7 +6,7 @@ public class Rivista extends CatalogoArticolo {
     }
     private Periodicità periodicità;
 
-    public Rivista(String isbn, String titolo, int annoDiPubblicazione, int numeroDiPagine) {
+    public Rivista(String isbn, String titolo, int annoDiPubblicazione, int numeroDiPagine, Periodicità periodicità) {
         super(isbn, titolo, annoDiPubblicazione, numeroDiPagine);
     }
 
