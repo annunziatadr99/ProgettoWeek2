@@ -2,7 +2,7 @@ package com.Bibliotecario;
 
 public class Rivista extends CatalogoArticolo {
     public enum Periodicità{
-        Settimanale,Mensile,Semestrale
+        SETTIMANALE,MENSILE,SEMESTRALE
     }
     private Periodicità periodicità;
 

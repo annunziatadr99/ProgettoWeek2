@@ -6,6 +6,8 @@ public class Libro extends CatalogoArticolo {
 
     public Libro(String isbn, String titolo, int annoDiPubblicazione, int numeroDiPagine, String autore, String genere) {
         super(isbn, titolo, annoDiPubblicazione, numeroDiPagine);
+        this.autore = autore;
+        this.genere = genere;
     }
 
     public String getAutore() {

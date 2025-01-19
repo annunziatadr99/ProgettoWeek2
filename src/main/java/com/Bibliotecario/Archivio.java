@@ -1,6 +1,5 @@
 package com.Bibliotecario;
 
-import com.github.javafaker.Faker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -45,7 +44,7 @@ public class Archivio {
                     case 0:
                         logger.info("Uscita!");
                     default:
-                        logger.error("Scelta non valida!");
+                        logger.warn("Scelta non valida!");
                 }
 
             }catch (Exception e){
@@ -93,12 +92,16 @@ public class Archivio {
                 Rivista.Periodicità periodicità = Rivista.Periodicità.valueOf(scanner.nextLine().toUpperCase());
                 articolo = new Rivista(isbn, titolo, anno, pagine, periodicità);
             } else {
-                logger.error("Qualcosa è andato storto, ARTICOLO NON AGGIUNTO. Ricomincia facendo attenzione nel compilare tutti i campi richiesti.");
+                logger.warn("Qualcosa è andato storto, ARTICOLO NON AGGIUNTO. Ricomincia facendo attenzione nel compilare tutti i campi richiesti.");
                 return;
             }
             aggiungiElemento(articolo);
         } catch (IsbnGiàEsistente e) {
             logger.error("Errore: " + e.getMessage());
+        }catch (IllegalArgumentException e){
+            logger.error("Periodicità non valida!");
+        }catch (Exception e){
+            logger.error("Errore!");
         }
     }
     public void aggiungiElemento(CatalogoArticolo articolo) throws IsbnGiàEsistente {
@@ -188,6 +191,7 @@ public class Archivio {
         logger.info("Numero totale di riviste: {}", numRiviste);
         maxPagineArticolo.ifPresent(articolo -> logger.info("Articolo con il maggior numero di pagine: {}", articolo));
         logger.info("Numero medio di pagine: {}", avgPagine);
+
     }
 }
 
